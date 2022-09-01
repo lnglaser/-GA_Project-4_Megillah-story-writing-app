@@ -19,13 +19,11 @@
 
 ***
 ### ***Technologies***
-* Item 1
-* Item 2
-    * Sub-item
+* Python
+* Vue
+* Django (*contigent on ability to use SQLite or Heroku for hosting postgres)
+    * Otherwise, Express
 
-1. Item 1
-2. Item 2
-    * Sub-item
 
 ***
 ### ***Getting Started***
@@ -44,10 +42,10 @@
 ### ***Screenshots***
 
 #### ***ERD***
-![Megillah ERD](https://drive.google.com/file/d/1Ts-Lg6QO3RV4z6ymbBh-KzlRY3j3qdXp/view?usp=sharing)
+![Megillah ERD](https://drive.google.com/file/d/1Ts-Lg6QO3RV4z6ymbBh-KzlRY3j3qdXp/view)
 
 #### ***CHD***
-![Megillah CHD](https://drive.google.com/file/d/1m2FWitOL_njAoRzTOseJAOuTFeMazorm/view?usp=sharing)
+![Megillah CHD](https://drive.google.com/file/d/1m2FWitOL_njAoRzTOseJAOuTFeMazorm/view)
 ***
 ### ***Future Updates***
 - [ ] Restricting adding to thread based on contributor order
