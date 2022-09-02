@@ -9,12 +9,28 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Chapter.belongsTo(models.User, { foreignKey: "userId" });
+      Chapter.belongsTo(models.Scroll, { foreignKey: "scrollId" });
     }
   }
   Chapter.init(
     {
-      userId: DataTypes.INTEGER,
-      scrollId: DataTypes.INTEGER,
+      userId: {
+        type: DataTypes.INTEGER,
+        onDelete: "CASCADE",
+        references: {
+          model: "users",
+          key: "id",
+        },
+      },
+      scrollId: {
+        type: DataTypes.INTEGER,
+        onDelete: "CASCADE",
+        references: {
+          model: "scrolls",
+          key: "id",
+        },
+      },
       body: DataTypes.STRING,
     },
     {

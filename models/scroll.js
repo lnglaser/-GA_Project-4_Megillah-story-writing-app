@@ -10,6 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Scroll.belongsTo(models.User, { foreignKey: "userId" });
+      Scroll.hasMany(models.Chapter, { foreignKey: "scrollId" });
     }
   }
   Scroll.init(
