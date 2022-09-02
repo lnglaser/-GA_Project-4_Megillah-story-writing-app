@@ -20,7 +20,20 @@ const showUserById = async (req, res) => {
   }
 };
 
+const showUserByName = async (req, res) => {
+  try {
+    let userName = req.body.query;
+    let results = await User.findAll({
+      where: { userName: { [Sequelize.Op.iLike]: `%${userName}%` } },
+    });
+    res.status(200).json(results);
+  } catch (error) {
+    throw error;
+  }
+};
+
 module.exports = {
   showAllUsers,
   showUserById,
+  showUserByName,
 };
