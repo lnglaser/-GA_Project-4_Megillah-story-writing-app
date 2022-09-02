@@ -1,0 +1,24 @@
+{
+  "name": "ga_project-4_megillah-story-writing-app",
+  "version": "1.0.0",
+  "description": "### By: Leon Glaser",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lnglaser/GA_Project-4_Megillah-story-writing-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lnglaser/GA_Project-4_Megillah-story-writing-app/issues"
+  },
+  "homepage": "https://github.com/lnglaser/GA_Project-4_Megillah-story-writing-app#readme",
+  "dependencies": {
+    "pg": "^8.8.0",
+    "sequelize": "^6.21.4"
+  }
+}

@@ -11,6 +11,8 @@
 
 ### ***Description***
 
+![Writing]
+
 #### **Based on a message board-based writing exercise/game, the aim of this app is to allow a user to open a thread that begins a story, and other people can jump in to continue it. The game is typically played with rules governing who can post and when (i.e. the last person to post must either wait a fixed amount of time, or until another user adds to the story.) Features governing posting permissions will be added during development.**
 
 **MVP: A user can start a thread, and contribute to an existing thread.**
