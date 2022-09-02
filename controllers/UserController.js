@@ -10,6 +10,17 @@ const showAllUsers = async (req, res) => {
   }
 };
 
+const showUserById = async (req, res) => {
+  try {
+    const userId = parseInt(req.params.user_id);
+    const selectedUser = await User.findByPk(userId);
+    res.status(200).json(selectedUser);
+  } catch (error) {
+    throw error;
+  }
+};
+
 module.exports = {
   showAllUsers,
+  showUserById,
 };
