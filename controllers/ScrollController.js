@@ -35,7 +35,7 @@ const showScrollsByUserId = async (req, res) => {
 
 const searchForScroll = async (req, res) => {
   try {
-    let searchQuery = parseInt(req.body.query);
+    let searchQuery = req.body.query;
     let results = await Scroll.findAll({
       where: {
         [Sequelize.Op.or]: [
