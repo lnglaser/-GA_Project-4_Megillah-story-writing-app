@@ -69,10 +69,28 @@ const addNewScroll = async (req, res) => {
   }
 };
 
+const updateScroll = async (req, res) => {
+  try {
+    const userId = req.params.user_id;
+    const scrollId = req.params.scroll_id;
+
+    let scrollToUpdate = await Scroll.update(req.body, {
+      where: {
+        [Sequelize.Op.and]: [{ id: scrollId }, { userId: userId }],
+      },
+      returning: true,
+    });
+    res.status(200).json(scrollToUpdate);
+  } catch (error) {
+    throw error;
+  }
+};
+
 module.exports = {
   showAllScrolls,
   showScrollById,
   showScrollsByUserId,
   searchForScroll,
   addNewScroll,
+  updateScroll,
 };
