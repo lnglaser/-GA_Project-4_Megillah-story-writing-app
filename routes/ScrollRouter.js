@@ -10,4 +10,6 @@ Router.post("/:user_id/create", controller.addNewScroll);
 
 Router.put("/users/:user_id/scrolls/:scroll_id", controller.updateScroll);
 
+Router.delete("/users/:user_id/scrolls/:scroll_id", controller.deleteScroll);
+
 module.exports = Router;

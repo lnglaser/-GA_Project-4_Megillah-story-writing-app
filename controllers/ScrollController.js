@@ -86,6 +86,24 @@ const updateScroll = async (req, res) => {
   }
 };
 
+const deleteScroll = async (req, res) => {
+  try {
+    const userId = parseInt(req.params.user_id);
+    const scrollId = parseInt(req.params.scroll_id);
+    const scrollToDelete = await Scroll.findByPk(scrollId);
+    let message = Object.assign({}, scrollToDelete);
+    await Scroll.destroy({
+      where: { [Sequelize.Op.and]: [{ id: scrollId }, { userId: userId }] },
+    });
+    res.status(200).json({
+      alert: `Deleted scroll with an ID of ${scrollId}, belonging to user ID ${userId}`,
+      destroyed: message,
+    });
+  } catch (error) {
+    throw error;
+  }
+};
+
 module.exports = {
   showAllScrolls,
   showScrollById,
@@ -93,4 +111,5 @@ module.exports = {
   searchForScroll,
   addNewScroll,
   updateScroll,
+  deleteScroll,
 };
