@@ -11,6 +11,16 @@ const showAllChapters = async (req, res) => {
   }
 };
 
+const showChapterById = async (req, res) => {
+  try {
+    const chapterId = parseInt(req.params.chapter_id);
+    const selectedChapter = await Chapter.findByPk(chapterId);
+    res.status(200).json(selectedChapter);
+  } catch (error) {
+    throw error;
+  }
+};
 module.exports = {
   showAllChapters,
+  showChapterById,
 };
