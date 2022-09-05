@@ -32,19 +32,23 @@ const showUserByName = async (req, res) => {
   }
 };
 
-const addUser = async (req, res) => {
+const updateUser = async (req, res) => {
   try {
-    let newUserInfo = {
-      ...req.body,
-    };
-    const newUser = await User.create(newUserInfo);
-    res.status(200).json(newUser);
+    const userId = parseInt(req.params.user_id);
+
+    let userToUpdate = await User.update(req.body, {
+      where: { id: userId },
+      returning: true,
+    });
+    res.status(200).json(userToUpdate);
   } catch (error) {
     throw error;
   }
 };
+
 module.exports = {
   showAllUsers,
   showUserById,
   showUserByName,
+  updateUser,
 };

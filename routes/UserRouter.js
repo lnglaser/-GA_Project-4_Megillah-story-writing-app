@@ -6,4 +6,6 @@ Router.get("/:user_id", controller.showUserById); //tested, works
 
 Router.post("/search", controller.showUserByName); //tested, works
 
+Router.put("/:user_id/edit", controller.updateUser);
+
 module.exports = Router;
