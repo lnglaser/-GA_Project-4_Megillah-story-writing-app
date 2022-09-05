@@ -20,7 +20,33 @@ const showChapterById = async (req, res) => {
     throw error;
   }
 };
+
+const showChaptersByUserId = async (req, res) => {
+  try {
+    const userId = parseInt(req.params.user_id);
+    const allUserChapters = await Chapter.findAll({
+      where: { userId: userId },
+    });
+    res.status(200).json(allUserChapters);
+  } catch (error) {
+    throw error;
+  }
+};
+
+const searchForChapter = async (req, res) => {
+  try {
+    let searchQuery = req.body.query;
+    let results = await Chapter.findAll({
+      where: { body: { [Sequelize.Op.iLike]: `%${searchQuery}%` } },
+    });
+    res.status(200).json(results);
+  } catch (error) {
+    throw error;
+  }
+};
 module.exports = {
   showAllChapters,
   showChapterById,
+  showChaptersByUserId,
+  searchForChapter,
 };
