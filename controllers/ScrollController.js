@@ -21,6 +21,25 @@ const showScrollById = async (req, res) => {
   }
 };
 
+const searchForScroll = async (req, res) => {
+  try {
+    let searchQuery = req.body.query;
+    let results = await Scroll.findAll({
+      where: {
+        [Sequelize.Op.or]: [
+          { title: { [Sequelize.Op.iLike]: `%${searchQuery}%` } },
+          { body: { [Sequelize.Op.iLike]: `%${searchQuery}%` } },
+        ],
+      },
+    });
+    res.status(200).json(results);
+  } catch (error) {
+    throw error;
+  }
+};
+
 module.exports = {
   showAllScrolls,
+  showScrollById,
+  searchForScroll,
 };
