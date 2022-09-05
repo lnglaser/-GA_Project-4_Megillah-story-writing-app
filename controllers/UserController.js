@@ -46,9 +46,24 @@ const updateUser = async (req, res) => {
   }
 };
 
+const deleteUser = async (req, res) => {
+  try {
+    const userId = parseInt(req.params.user_id);
+    const userToDelete = await User.findByPk(userId);
+    let message = Object.assign({}, userToDelete);
+    await User.destroy({ where: { id: userId } });
+    res.status(200).json({
+      alert: `Deleted user with an ID of ${userId}`,
+      destroyed: message,
+    });
+  } catch (error) {
+    throw error;
+  }
+};
 module.exports = {
   showAllUsers,
   showUserById,
   showUserByName,
   updateUser,
+  deleteUser,
 };

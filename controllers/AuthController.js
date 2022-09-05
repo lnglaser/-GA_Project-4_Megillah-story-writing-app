@@ -7,7 +7,7 @@ const addUser = async (req, res) => {
       ...req.body,
     };
     console.log(newUserInfo.email);
-    //attempting to add email/username constraints to registering new user - check sequelize docs for Unique constraint to be added to models? New migration
+    //attempting to add email/username constraints to registering new user - check sequelize docs for Unique constraint to be added to models? New migration for changeColumn?
 
     // let emailList = await User[email].findAll();
     // console.log(emailList);

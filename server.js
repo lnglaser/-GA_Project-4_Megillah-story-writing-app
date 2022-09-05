@@ -27,7 +27,7 @@ app.listen(PORT, () => {
 //   res.json({ message: "Accessing scrolls" });
 // });
 
-app.get("/scrolls/:id", (req, res) => {
-  console.log(`Accessing scroll with id ${req.params.id}`);
-  res.json({ message: `Accessing scroll with id ${req.params.id}` });
-});
+// app.get("/scrolls/:id", (req, res) => {
+//   console.log(`Accessing scroll with id ${req.params.id}`);
+//   res.json({ message: `Accessing scroll with id ${req.params.id}` });
+// });
