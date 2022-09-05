@@ -22,10 +22,10 @@ app.listen(PORT, () => {
 //User routes here:
 // app.get("/users", (req, res) => res.json);
 
-app.get("/scrolls", (req, res) => {
-  console.log("Accessing scrolls");
-  res.json({ message: "Accessing scrolls" });
-});
+// app.get("/scrolls", (req, res) => {
+//   console.log("Accessing scrolls");
+//   res.json({ message: "Accessing scrolls" });
+// });
 
 app.get("/scrolls/:id", (req, res) => {
   console.log(`Accessing scroll with id ${req.params.id}`);
