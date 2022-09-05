@@ -32,6 +32,17 @@ const showUserByName = async (req, res) => {
   }
 };
 
+const addUser = async (req, res) => {
+  try {
+    let newUserInfo = {
+      ...req.body,
+    };
+    const newUser = await User.create(newUserInfo);
+    res.status(200).json(newUser);
+  } catch (error) {
+    throw error;
+  }
+};
 module.exports = {
   showAllUsers,
   showUserById,
