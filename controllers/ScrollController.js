@@ -21,6 +21,18 @@ const showScrollById = async (req, res) => {
   }
 };
 
+const showScrollsByUserId = async (req, res) => {
+  try {
+    const userId = parseInt(req.params.user_id);
+    const allUserScrolls = await Scroll.findAll({
+      where: { userId: userId },
+    });
+    res.status(200).json(allUserScrolls);
+  } catch (error) {
+    throw error;
+  }
+};
+
 const searchForScroll = async (req, res) => {
   try {
     let searchQuery = parseInt(req.body.query);
@@ -60,6 +72,7 @@ const addNewScroll = async (req, res) => {
 module.exports = {
   showAllScrolls,
   showScrollById,
+  showScrollsByUserId,
   searchForScroll,
   addNewScroll,
 };
