@@ -54,4 +54,4 @@
 - [ ] Restricting adding to thread based on contributor order (previous user must wait until new user adds, or a certain amount of time has passed)
 - [ ] Timing out edit function on entries (edit function will be removed from scrolls/chapters after a certain amount of time)
 - [ ] Allow users extra controls on threads they started (approving chapter additions, setting timers)
-- [ ] 
+- [ ] Styling
