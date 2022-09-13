@@ -23,8 +23,7 @@
 ### ***Technologies***
 * Python
 * Vue
-* Django (*contigent on ability to use SQLite or Heroku for hosting postgres)
-    * Otherwise, Express
+* PostgreSQL
 
 
 ***
