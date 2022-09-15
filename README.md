@@ -5,10 +5,10 @@
 [LinkedIn](https://www.linkedin.com/in/leon-glaser-02645322/) | 
 [Twitter](https://twitter.com/sirescapist) |
 [GitHub](https://github.com/lnglaser)
-[GitHub](https://github.com/lnglaser)
 
 ***
 
+![ProjectBanner](imageAssets/aaron-burden-y02jEX_B0O0-unsplash.jpg)
 ### ***Description***
 
 #### **Based on a message board-based writing exercise/game, the aim of this app is to allow a user to open a thread that begins a story, and other people can jump in to continue it. The game is typically played with rules governing who can post and when (i.e. the last person to post must either wait a fixed amount of time, or until another user adds to the story.) Features governing posting permissions will be added during development.**
