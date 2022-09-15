@@ -29,10 +29,10 @@
 1. Build Models
     * User
     * Scroll
-    * Entry
+    * Chapter
 
 2. Define routes
-    * CRUD on Entry
+    * CRUD on Chapter
     * CRUD on Scroll
     * CRUD on User (?)
 
@@ -40,11 +40,13 @@
 ***
 ### ***Screenshots***
 
+..
+
 #### ***ERD***
-![Megillah ERD](https://drive.google.com/file/d/1Ts-Lg6QO3RV4z6ymbBh-KzlRY3j3qdXp/view)
+![Megillah ERD](imageAssets/Project 4 - Megillah ERD & CHD-ERD (1).jpg)
 
 #### ***CHD***
-![Megillah CHD](https://drive.google.com/file/d/1m2FWitOL_njAoRzTOseJAOuTFeMazorm/view)
+![Megillah CHD](imageAssets/Project 4 - Megillah ERD & CHD-CHD (1).jpg)
 ***
 ### ***Future Updates***
 - [ ] Implementing frontend user Features
