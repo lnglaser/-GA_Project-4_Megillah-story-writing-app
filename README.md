@@ -43,10 +43,10 @@
 ..
 
 #### ***ERD***
-![MegillahERD](imageAssets/MegillahCHD.jpg)
+![MegillahERD](imageAssets/MegillahERD.jpg)
 
 #### ***CHD***
-![MegillahCHD](imageAssets/MegillahERD.jpg)
+![MegillahCHD](imageAssets/MegillahCHD.jpg)
 ***
 ### ***Future Updates***
 - [ ] Implementing frontend user Features
