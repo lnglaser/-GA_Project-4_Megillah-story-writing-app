@@ -43,10 +43,10 @@
 ..
 
 #### ***ERD***
-![Megillah ERD](imageAssets/Project 4 - Megillah ERD & CHD-ERD (1).jpg)
+![MegillahERD](imageAssets/MegillahCHD.jpg)
 
 #### ***CHD***
-![Megillah CHD](imageAssets/Project 4 - Megillah ERD & CHD-CHD (1).jpg)
+![MegillahCHD](imageAssets/MegillahERD.jpg)
 ***
 ### ***Future Updates***
 - [ ] Implementing frontend user Features
